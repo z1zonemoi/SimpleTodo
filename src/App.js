@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import Insert from "./components/Insert";
+import ToDoContainer from "./components/ToDoContainer";
+import TodoList from "./components/TodoList";
+
 
 function App() {
+  const [todos, setTodos] = useState([]);
+
+  useEffect(()=>{
+    fetch('http://localhost:4000/Todos')
+    .then(res => {
+      if(!res.ok){
+        throw Error('찾을 수 없음')
+      }
+      return res.json();
+    })
+    .then(data => {
+      setTodos(data);
+    })
+    .catch(err => {
+      throw Error('error')
+    })
+  },[])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ToDoContainer>
+      <Insert/>
+      <TodoList todos={todos}/>
+    </ToDoContainer>
   );
 }
 
