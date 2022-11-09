@@ -8,7 +8,7 @@ const ListItem = styled.div`
     width: 450px;
     padding: 0.5rem;
     &:first-child{
-        padding-top: 1rem;
+        padding-top: 0.8rem;
     }
     display: flex;
     justify-content: space-between;
@@ -31,6 +31,7 @@ const Item = styled.div`
         font-size: 0.8rem;
         &:hover{
             color: #ED4C67;
+            cursor: pointer;
         }
     }
     .edit{
@@ -39,6 +40,7 @@ const Item = styled.div`
         font-size: 0.8rem;
         &:hover{
             color: #4b6584;
+            cursor: pointer;
         }
     }
 `
@@ -60,6 +62,7 @@ const CheckButton = styled.button`
     color: #E6E9EE;
     &:hover{
         background-color: #858d91;
+        cursor: pointer;
     }
 `
 
@@ -70,7 +73,7 @@ const TodoListItem = ({todo}) => {
     const [value, setValue] = useState(text)
 
     const del = ()=>{
-        if(window.confirm('삭제 하시겠습니까?'))
+        if(window.confirm('삭제하시겠습니까?'))
         fetch(`http://localhost:4000/Todos/${id}`,{
             method: "DELETE",
         })

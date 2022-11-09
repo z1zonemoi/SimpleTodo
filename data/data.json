@@ -2,66 +2,66 @@
   "Todos": [
     {
       "text": "CRUD",
-      "checked": false,
+      "checked": true,
       "id": 1
     },
     {
       "text": "json-server",
-      "checked": false,
+      "checked": true,
       "id": 2
     },
     {
       "text": "figma",
-      "checked": false,
+      "checked": true,
       "id": 3
     },
     {
-      "text": "1",
+      "text": "C : 엔터 || +아이콘",
       "checked": false,
       "id": 4
     },
     {
-      "text": "2",
+      "text": "U : 연필 아이콘, 수정 후 엔터",
       "checked": false,
       "id": 5
     },
     {
-      "text": "3",
+      "text": "D : 휴지통 아이콘, 알람 > 확인",
       "checked": false,
       "id": 6
     },
     {
-      "text": "4",
+      "text": "1",
       "checked": false,
       "id": 7
     },
     {
-      "text": "5",
+      "text": "2",
       "checked": false,
       "id": 8
     },
     {
-      "text": "6",
+      "text": "3",
       "checked": false,
       "id": 9
     },
     {
-      "text": "7",
+      "text": "4",
       "checked": false,
       "id": 10
     },
     {
-      "text": "8",
+      "text": "5",
       "checked": false,
       "id": 11
     },
     {
-      "text": "9",
+      "text": "6",
       "checked": false,
       "id": 12
     },
     {
-      "text": "10",
+      "text": "7",
       "checked": false,
       "id": 13
     }

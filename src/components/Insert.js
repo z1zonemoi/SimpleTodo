@@ -10,6 +10,7 @@ const TodoInsert = styled.form`
     width: 450px;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0.2rem;
     input{
         border: inherit;
         background: none;
@@ -51,18 +52,19 @@ const Insert = () => {
     }
 
     const onSubmit = () => {
-        console.log(value)
-        fetch('http://localhost:4000/Todos',{
-        method: "POST",
-        headers: {"Content-Type" : "application/json"},
-        body: JSON.stringify({
-          text: value,
-          checked : false
-        })
-      })
-      .catch((error)=>{
-        console.error('Error',error)
-      })
+        if(value){
+            fetch('http://localhost:4000/Todos',{
+            method: "POST",
+            headers: {"Content-Type" : "application/json"},
+            body: JSON.stringify({
+              text: value,
+              checked : false
+            })
+          })
+          .catch((error)=>{
+            console.error('Error',error)
+          })
+        }
     }
 
 
